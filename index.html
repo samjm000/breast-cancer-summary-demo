@@ -706,14 +706,6 @@ details pre{
     display: none !important;
   }
 }
-
-/* Extra small screens (iPhone Mini etc) */
-@media (max-width: 400px) {
-  #csd { padding: 0 8px; }
-  .csd-card { padding: 16px 12px; }
-  .csd-header { padding: 12px; }
-  .patient-section-intro { padding: 12px 14px; }
-}
   </style>
  </head>
  <body>
@@ -783,44 +775,40 @@ details pre{
    <main>
     <section class="csd-card data-source-content active" data-accent="var(--acc-summary)" data-title-accent="" id="section-summary">
      <!-- ========== PERSONAL DETAILS ========== -->
-     <div style="background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); border: 1px solid #BFDBFE; border-left: 4px solid #3B82F6; padding: 16px 24px; margin: 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;">
-       <h1 style="margin: 0; font-size: 1.3rem; font-weight: 700; color: #1E3A8A;">
+     <div style="background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); border: 1px solid #BFDBFE; border-left: 4px solid #3B82F6; padding: 20px 24px; margin: 0;">
+      <div style="margin-bottom: 16px;">
+       <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #1E40AF; margin-bottom: 4px;">
+        Your Details
+       </div>
+       <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700; color: #1E3A8A;">
         Susan Smith
        </h1>
-       <div style="display: flex; gap: 32px; align-items: center;">
-        <div style="font-size: 0.9rem; color: #1E3A8A;">
-         <span style="color: #1E40AF; font-weight: 500;">
-          NHS:
-         </span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; margin-top: 16px;">
+       <div style="min-width: 0;">
+        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #1E40AF;">
+         NHS Number
+        </div>
+        <div style="font-size: 1rem; font-weight: 600; margin-top: 2px; color: #1E3A8A;">
          NHS1234567890
         </div>
-        <div style="font-size: 0.9rem; color: #1E3A8A;">
-         <span style="color: #1E40AF; font-weight: 500;">
-          DOB:
-         </span>
+       </div>
+       <div style="min-width: 0;">
+        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #1E40AF;">
+         Date of Birth
+        </div>
+        <div style="font-size: 1rem; font-weight: 600; margin-top: 2px; color: #1E3A8A;">
          14 May 1962
         </div>
-        <div style="font-size: 0.9rem; color: #1E3A8A;">
-         <span style="color: #1E40AF; font-weight: 500;">
-          Generated:
-         </span>
-         19 January 2026
+       </div>
+       <div style="min-width: 0;">
+        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #1E40AF;">
+         Date of Summary
+        </div>
+        <div style="font-size: 1rem; font-weight: 600; margin-top: 2px; color: #1E3A8A;">
+         21 January 2026
         </div>
        </div>
-      </div>
-     </div>
-     <!-- ========== YOUR SUMMARY ========== -->
-     <div style="margin-top: 28px; padding-top: 24px; border-top: 2px solid #e5e7eb;">
-      <h2 style="margin: 0 0 16px 0; font-size: 1.1rem; font-weight: 700; color: #374151;">
-       <span style="display: inline-block; width: 4px; height: 20px; background: #3B82F6; margin-right: 12px; vertical-align: middle;">
-       </span>
-       Your Summary
-      </h2>
-      <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-left: 4px solid #3B82F6; padding: 20px 24px;">
-       <p style="line-height: 1.8; margin: 0; font-size: 1.05rem; font-weight: 500; color: #334155;">
-        You were diagnosed with breast cancer in March 2021. After your diagnosis, you had chemotherapy treatment which worked well at shrinking the cancer, followed by an operation to remove it. You then had radiotherapy and have been taking a hormone tablet since then. Unfortunately, in 2023 scans showed the cancer had come back and spread to your liver and bones. You're currently receiving ongoing treatment to control this, and your care team is closely monitoring your progress to ensure you receive the best possible care.
-       </p>
       </div>
      </div>
      <!-- ========== YOUR DIAGNOSIS ========== -->
@@ -913,16 +901,6 @@ details pre{
         <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
          Started 04 November 2024
         </div>
-        <p style="margin: 12px 0 0 0; font-size: 0.95rem; color: #475569; line-height: 1.6;">
-         <strong>
-          Ribociclib
-         </strong>
-         is a targeted therapy tablet (CDK4/6 inhibitor), and
-         <strong>
-          fulvestrant
-         </strong>
-         is a hormone therapy injection.
-        </p>
        </div>
        <p style="margin: 16px 0 0 0; font-size: 0.9rem; color: #64748b;">
         You have received 5 different treatments since your diagnosis.
@@ -2511,19 +2489,7 @@ details pre{
          <strong>
           Intent:
          </strong>
-         Diagnostic •
-         <strong>
-          Surgeon:
-         </strong>
-         Dr. Patel (Interventional Radiology) •
-         <strong>
-          Duration:
-         </strong>
-         35 minutes •
-         <strong>
-          Blood Loss:
-         </strong>
-         10 ml
+         Diagnostic
         </p>
         <details style="margin-top:8px;">
          <summary>
@@ -2561,19 +2527,7 @@ details pre{
          <strong>
           Intent:
          </strong>
-         Curative •
-         <strong>
-          Surgeon:
-         </strong>
-         Ms. Anderson (Breast Surgery) •
-         <strong>
-          Duration:
-         </strong>
-         95 minutes •
-         <strong>
-          Blood Loss:
-         </strong>
-         50 ml
+         Curative
         </p>
         <details style="margin-top:8px;">
          <summary>
@@ -2702,7 +2656,7 @@ details pre{
      <div class="patient-section-intro" style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px;">
       <p style="margin: 0; color: #0369a1; font-size: 0.95rem; line-height: 1.6;">
        This section shows any significant side effects from your treatment that have been recorded by your care team.
-       <a href="https://www.cancerresearchuk.org/about-cancer/treatment" style="color: #0369a1; text-decoration: underline;" target="_blank">
+       <a href="https://www.cancerresearchuk.org/about-cancer/breast-cancer/living-with/side-effects" style="color: #0369a1; text-decoration: underline;" target="_blank">
         Learn more about managing side effects
        </a>
       </p>
@@ -2948,19 +2902,19 @@ details pre{
            9.9
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            g/dL
@@ -3019,19 +2973,19 @@ details pre{
            1.2
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            ×10⁹/L
@@ -3090,19 +3044,19 @@ details pre{
            119.5
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            ×10⁹/L
@@ -3161,19 +3115,19 @@ details pre{
            -0.1
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            ×10⁹/L
@@ -3242,19 +3196,19 @@ details pre{
            2.1
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            U/L
@@ -3313,19 +3267,19 @@ details pre{
            6.0
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            U/L
@@ -3384,19 +3338,19 @@ details pre{
            1.6
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            μmol/L
@@ -3455,19 +3409,19 @@ details pre{
            32.4
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            g/L
@@ -3536,19 +3490,19 @@ details pre{
            134.0
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            mmol/L
@@ -3607,19 +3561,19 @@ details pre{
            3.4
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            mmol/L
@@ -3678,19 +3632,19 @@ details pre{
            55.0
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            μmol/L
@@ -3749,19 +3703,19 @@ details pre{
            2.0
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="55.0" y="115">
-           20/02
+           20 February
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="106.25" y="115">
-           18/06
+           18 June
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="157.5" y="115">
-           04/11
+           04 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="208.75" y="115">
-           25/11
+           25 November
           </text>
           <text fill="#6b7280" font-size="9" text-anchor="middle" x="260.0" y="115">
-           05/12
+           05 December
           </text>
           <text fill="#4b5563" font-size="11" font-weight="600" text-anchor="middle" transform="rotate(-90, 10, 60.0)" x="10" y="60.0">
            mmol/L
@@ -3933,7 +3887,7 @@ details pre{
        <br/>
        Reference: NHS1234567890
        <br/>
-       Generated: 2026-01-19T08:05:59.003907
+       Generated: 2026-01-21T08:41:57.821401
       </div>
      </div>
      <div style="flex-shrink: 0;">
@@ -3966,7 +3920,7 @@ details pre{
    <script>
     function reportError() {
     var patientId = "NHS1234567890";
-    var generatedTime = "2026-01-19T08:05:59.003907";
+    var generatedTime = "2026-01-21T08:41:57.821401";
     var timestamp = new Date().toISOString();
     var currentTabEl = document.querySelector('.csd-tab.is-active');
     var currentTab = currentTabEl ? currentTabEl.getAttribute('data-acc') : 'unknown';
